@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MyForum</string>
+    <string name="login">Login</string>
+    <string name="pwd">Password</string>
+    <string name="btnConnect">Connect</string>
+    <string name="ErrorMessage">You have not entered all the necessary information</string>
+    <string name="Register">Register</string>
+    <string name="Home">Home</string>
+    <string name="city">Choose a city</string>
+    <string name="btnregister">Register</string>
+    <string name="loginName">Login</string>
+    <string name="pwd1">Password</string>
+    <string name="pwd2">confirm your password</string>
+    <string name="tvcity">City</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="loginEmpty">You do not have filled user field !</string>
+    <string name="pwd1Empty">You do not have filled the password field !</string>
+    <string name="cityEmpty">You do not have chosen any city !</string>
+    <string name="genderEmpty">You do not have chosen the sex !</string>
+</resources>
