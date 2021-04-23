@@ -17,5 +17,9 @@
     <string name="female">Femme</string>
     <string name="loginEmpty">Le champs Pseudo est vide !</string>
     <string name="pwd1Empty">Le champs Mot de passe est vide</string>
-    <string name="cityEmpty">Vous n\'avez pas choisi votre ville</string>
+    <string name="cityEmpty">Vous n\'avez pas choisi votre ville !</string>
+    <string name="genderEmpty">Vous n\'avez pas choisi le sexe !</string>
+    <string name="topicCreate">Nouveau sujet</string>
+    <string name="hintTopic">Titre du sujet</string>
+    <string name="existingTopic">Sujet existant</string>
 </resources>

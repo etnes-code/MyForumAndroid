@@ -28,6 +28,7 @@
         <item name="android:background">@color/background_editText</item>
         <item name="android:padding">5dp</item>
         <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/white</item>
     </style>
     <style name="errorMessage">
         <item name="android:textColor">#ff0000</item>

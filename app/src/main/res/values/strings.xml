@@ -18,4 +18,7 @@
     <string name="pwd1Empty">You do not have filled the password field !</string>
     <string name="cityEmpty">You do not have chosen any city !</string>
     <string name="genderEmpty">You do not have chosen the sex !</string>
+    <string name="topicCreate">New Topic</string>
+    <string name="hintTopic">Title of topic</string>
+    <string name="existingTopic">Existing topics</string>
 </resources>

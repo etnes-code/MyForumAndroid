@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_linearl">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/topicCreate"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hintTopic"
+            style="@style/editTextStyle"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textAppStyle"
+            android:text="@string/existingTopic"
+            android:gravity="center"
+            android:layout_marginTop="20sp"
+            />
+        <LinearLayout
+            android:id="@+id/ll_topic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="les topics se trouveront ici"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</ScrollView>
