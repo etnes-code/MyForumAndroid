@@ -1,4 +1,4 @@
-package training.etnes;
+package activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import activity.R;
 
 public class RegisterActivity extends AppCompatActivity {
 

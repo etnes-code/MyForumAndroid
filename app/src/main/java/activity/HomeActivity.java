@@ -1,4 +1,4 @@
-package training.etnes;
+package activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,9 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import activity.R;
 
 public class HomeActivity extends AppCompatActivity {
     private Button btnConnect;
@@ -48,7 +49,6 @@ public class HomeActivity extends AppCompatActivity {
         btnConnect.setOnClickListener(listenerConnect);
         btnRegister=findViewById(R.id.btn_register);
         btnRegister.setOnClickListener(listenerRegister);
-        ImageView imageview= (ImageView)findViewById(R.id.image);
-        imageview.setImageResource(R.drawable.forum);
+
     }
 }

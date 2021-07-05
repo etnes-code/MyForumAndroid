@@ -1,14 +1,16 @@
-package training.etnes;
+package activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class TopicActivity extends AppCompatActivity {
+import activity.R;
+
+public class CityActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_topic);
+        setContentView(R.layout.activity_city);
     }
 }
