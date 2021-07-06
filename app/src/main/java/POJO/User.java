@@ -1,6 +1,8 @@
 package POJO;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     //proprieties
     String loginName;
     String passWord;
@@ -13,6 +15,10 @@ public class User {
         this.passWord = passWord;
         this.gender = gender;
         this.city = city;
+    }
+    public User(String loginName, String passWord) {
+        this.loginName = loginName;
+        this.passWord = passWord;
     }
     //getter and setter
     public String getLoginName() {

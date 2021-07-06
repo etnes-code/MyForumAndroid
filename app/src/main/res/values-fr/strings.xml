@@ -4,7 +4,7 @@
     <string name="login">Pseudo</string>
     <string name="pwd">Mot de passe</string>
     <string name="btnConnect">Se connecter</string>
-    <string name="ErrorMessage">Vous n\'avez pas rentré toutes les informations nécéssaire</string>
+    <string name="ErrorMessage">"vous n'avez pas rentré toutes les informations nécessaire "</string>
     <string name="Register">S\'enregistrer</string>
     <string name="Home">Accueil</string>
     <string name="tvcity">Ville</string>
@@ -22,4 +22,5 @@
     <string name="topicCreate">Nouveau sujet</string>
     <string name="hintTopic">Titre du sujet</string>
     <string name="existingTopic">Sujet existant</string>
+    <string name="ErrorMessageloginpwd">"vous n'avez pas rentré toutes les informations nécessaire "</string>
 </resources>

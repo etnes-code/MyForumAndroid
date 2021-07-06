@@ -11,6 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import POJO.User;
 import activity.R;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -26,20 +27,26 @@ public class RegisterActivity extends AppCompatActivity {
         public void onClick(View v) {
             RadioGroup rgGender=(RadioGroup) findViewById(R.id.rg_gender);
             int selectedId= rgGender.getCheckedRadioButtonId();
-            if(selectedId== -1){
-                Toast.makeText(RegisterActivity.this,getResources().getString(R.string.genderEmpty),Toast.LENGTH_LONG).show();
-            }else{
-                RadioButton rbGender=(RadioButton) findViewById(selectedId);
-                Toast.makeText(RegisterActivity.this,rbGender.getText().toString(),Toast.LENGTH_LONG).show();
-            }
+            // verification des champs
             if(etLogin.getText().toString().isEmpty() ||etLogin.getText().toString()==null )
                 Toast.makeText(RegisterActivity.this,getResources().getString(R.string.loginEmpty),Toast.LENGTH_LONG).show();
             else if(etPwd1.getText().toString().isEmpty() ||etPwd1.getText().toString()==null )
                 Toast.makeText(RegisterActivity.this,getResources().getString(R.string.pwd1Empty),Toast.LENGTH_LONG).show();
             else if(etPwd2.getText().toString().isEmpty() ||etPwd2.getText().toString()==null )
                 Toast.makeText(RegisterActivity.this,getResources().getString(R.string.pwd1Empty),Toast.LENGTH_LONG).show();
+            else if(!etPwd1.getText().toString().equals(etPwd2.getText().toString()))
+                Toast.makeText(RegisterActivity.this,getResources().getString(R.string.pwdnotthesame),Toast.LENGTH_LONG).show();
             else if(tvCity.getText().toString().isEmpty() ||tvCity.getText().toString()==null )
                 Toast.makeText(RegisterActivity.this,getResources().getString(R.string.cityEmpty),Toast.LENGTH_LONG).show();
+            else if(selectedId== -1)
+                Toast.makeText(RegisterActivity.this,getResources().getString(R.string.genderEmpty),Toast.LENGTH_LONG).show();
+            else{
+            //création de l'objet contenant les informations à sauver dans la base de donnée
+            RadioButton rbGender=(RadioButton) findViewById(selectedId);
+            User user= new User(etLogin.getText().toString(), etPwd1.getText().toString(), rbGender.getText().toString(), tvCity.getText().toString());
+            //envoi des informations d'inscription à la base de données
+            }
+
         }
     };
 
@@ -54,5 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
         btnCity=findViewById(R.id.btn_city);
         btnRegister=findViewById(R.id.btn_ok);
         btnRegister.setOnClickListener(listener);
+        tvCity.setText("charlouzz");
+
     }
 }

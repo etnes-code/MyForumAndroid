@@ -3,7 +3,7 @@
     <string name="login">Login</string>
     <string name="pwd">Password</string>
     <string name="btnConnect">Connect</string>
-    <string name="ErrorMessage">You have not entered all the necessary information</string>
+    <string name="ErrorMessage">you have not entered all the necessary information</string>
     <string name="Register">Register</string>
     <string name="Home">Home</string>
     <string name="city">Choose a city</string>
@@ -21,4 +21,5 @@
     <string name="topicCreate">New Topic</string>
     <string name="hintTopic">Title of topic</string>
     <string name="existingTopic">Existing topics</string>
+    <string name="pwdnotthesame">passwords are not the same</string>
 </resources>

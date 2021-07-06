@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import activity.R;
+import POJO.User;
 
 public class HomeActivity extends AppCompatActivity {
     private Button btnConnect;
@@ -23,10 +23,11 @@ public class HomeActivity extends AppCompatActivity {
     View.OnClickListener listenerConnect = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if(etLogin.getText().toString().equals("") || etPwd.getText().toString().equals("")){
+            if(etLogin.getText().toString().equals("") || etPwd.getText().toString().equals("")  ){ // verification des champs
                 Toast.makeText(HomeActivity.this,getResources().getString(R.string.ErrorMessage),Toast.LENGTH_LONG).show();
-            }else{
-                Toast.makeText(HomeActivity.this,"ok",Toast.LENGTH_LONG).show();
+            } else{ // si c'est ok, création  d'un objet avec les informations de log
+                User user= new User(etLogin.getText().toString(),etPwd.getText().toString());
+                //envoi des données pour verifier si c'est bon et changement d'activité(activité asynchrone)
             }
         }
     };
