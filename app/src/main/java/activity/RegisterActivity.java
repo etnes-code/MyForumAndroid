@@ -2,6 +2,7 @@ package activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,7 +47,13 @@ public class RegisterActivity extends AppCompatActivity {
             User user= new User(etLogin.getText().toString(), etPwd1.getText().toString(), rbGender.getText().toString(), tvCity.getText().toString());
             //envoi des informations d'inscription à la base de données
             }
-
+        }
+    };
+    View.OnClickListener listenercity=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent= new Intent(RegisterActivity.this,CityActivity.class);
+            startActivity(intent);
         }
     };
 
@@ -62,6 +69,7 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister=findViewById(R.id.btn_ok);
         btnRegister.setOnClickListener(listener);
         tvCity.setText("charlouzz");
+        btnCity.setOnClickListener(listenercity);
 
     }
 }
