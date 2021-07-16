@@ -23,6 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
     private TextView tvCity;
     private Button btnCity;
     private Button btnRegister;
+    final int NUM_REQUETE=1;
     View.OnClickListener listener=new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -52,8 +53,11 @@ public class RegisterActivity extends AppCompatActivity {
     View.OnClickListener listenercity=new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent= new Intent(RegisterActivity.this,CityActivity.class);
+           /* Intent intent= new Intent(RegisterActivity.this,CityActivity.class);
             startActivity(intent);
+            finish();*/
+            Intent intent= new Intent(RegisterActivity.this,CityActivity.class);
+            startActivityForResult(intent, 1);
         }
     };
 
@@ -68,8 +72,16 @@ public class RegisterActivity extends AppCompatActivity {
         btnCity=findViewById(R.id.btn_city);
         btnRegister=findViewById(R.id.btn_ok);
         btnRegister.setOnClickListener(listener);
-        tvCity.setText("charlouzz");
         btnCity.setOnClickListener(listenercity);
-
+    }
+    //récuperer la ville du wizard
+    protected void onActivityResult(int num_requete, int code_retour, Intent intent_retour) {
+        super.onActivityResult(num_requete, code_retour, intent_retour);
+        if(num_requete==NUM_REQUETE){
+            if(code_retour == RESULT_OK){
+                String cityName= intent_retour.getStringExtra("cityName");
+                tvCity.setText(cityName);
+            }
+        }
     }
 }
