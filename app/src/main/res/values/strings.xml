@@ -22,4 +22,5 @@
     <string name="hintTopic">Title of topic</string>
     <string name="existingTopic">Existing topics</string>
     <string name="pwdnotthesame">passwords are not the same</string>
+    <string name="emptylistcity">List is empty</string>
 </resources>

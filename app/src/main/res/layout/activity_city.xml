@@ -4,9 +4,12 @@
     android:layout_height="match_parent"
     android:background="@color/background_color"
     >
-    <Button
-        android:id="@+id/city1"
+    <LinearLayout
+        android:id="@+id/ll_city"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Charlouzz"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
 </ScrollView>
