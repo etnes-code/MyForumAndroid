@@ -29,10 +29,9 @@ public class CityActivity extends AppCompatActivity {
             //Récupere l'id du bouton cliqué
             int id=v.getId();
             Button btn=findViewById(id);
-            //envoye les données dans registeractivity
-            //test 2(fonctionnelle pour la suite)
+            //envoye les données  du bouton cliqué dans registeractivity
             Intent intent_retour= new Intent();
-            intent_retour.putExtra("cityName",itemListCity.toString());
+            intent_retour.putExtra("cityName",btn.getText().toString());
             setResult(RESULT_OK,intent_retour);
             finish();
         }
@@ -54,6 +53,7 @@ public class CityActivity extends AppCompatActivity {
                 btn.setText(item);
                 btn.setOnClickListener(listener);
                 llcity.addView(btn);
+                cpt++;
             }
         }else {
             TextView tv=new TextView(this);
@@ -62,7 +62,13 @@ public class CityActivity extends AppCompatActivity {
         }
     }
     public void populate_error(String reponse){
-        Toast.makeText(CityActivity.this,"code : "+reponse,Toast.LENGTH_LONG).show();
+       //notification pour informer l'utilisateur qu'il y a un soucis
+        if(reponse == "1")
+            Toast.makeText(CityActivity.this,getResources().getString(R.string.code_1),Toast.LENGTH_LONG).show();
+        if(reponse == "2")
+            Toast.makeText(CityActivity.this,getResources().getString(R.string.code_2),Toast.LENGTH_LONG).show();
+        if(reponse == "3")
+            Toast.makeText(CityActivity.this,getResources().getString(R.string.code_1),Toast.LENGTH_LONG).show();
     }
 }
 

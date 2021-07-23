@@ -23,4 +23,6 @@
     <string name="existingTopic">Existing topics</string>
     <string name="pwdnotthesame">passwords are not the same</string>
     <string name="emptylistcity">List is empty</string>
+    <string name="code_2">Unable to contact the server</string>
+    <string name="code_1">" Please contact support"</string>
 </resources>
