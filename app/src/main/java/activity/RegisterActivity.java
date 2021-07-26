@@ -12,6 +12,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import Async.registerAsync;
 import POJO.User;
 import activity.R;
 
@@ -34,6 +35,8 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(RegisterActivity.this,getResources().getString(R.string.loginEmpty),Toast.LENGTH_LONG).show();
             else if(etPwd1.getText().toString().isEmpty() ||etPwd1.getText().toString()==null )
                 Toast.makeText(RegisterActivity.this,getResources().getString(R.string.pwd1Empty),Toast.LENGTH_LONG).show();
+            else if(etPwd1.getText().toString().length()<6)
+                Toast.makeText(RegisterActivity.this,getResources().getString(R.string.pwd1toshort),Toast.LENGTH_LONG).show();
             else if(etPwd2.getText().toString().isEmpty() ||etPwd2.getText().toString()==null )
                 Toast.makeText(RegisterActivity.this,getResources().getString(R.string.pwd1Empty),Toast.LENGTH_LONG).show();
             else if(!etPwd1.getText().toString().equals(etPwd2.getText().toString()))
@@ -44,9 +47,10 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(RegisterActivity.this,getResources().getString(R.string.genderEmpty),Toast.LENGTH_LONG).show();
             else{
             //création de l'objet contenant les informations à sauver dans la base de donnée
-            RadioButton rbGender=(RadioButton) findViewById(selectedId);
-            User user= new User(etLogin.getText().toString(), etPwd1.getText().toString(), rbGender.getText().toString(), tvCity.getText().toString());
+                RadioButton rbGender=(RadioButton) findViewById(selectedId);
+                User user= new User(etLogin.getText().toString(), etPwd1.getText().toString(), rbGender.getText().toString(), tvCity.getText().toString());
             //envoi des informations d'inscription à la base de données
+                new registerAsync(RegisterActivity.this).execute(user);
             }
         }
     };
@@ -83,5 +87,29 @@ public class RegisterActivity extends AppCompatActivity {
                 tvCity.setText(cityName);
             }
         }
+    }
+    public void populate(){
+        Toast.makeText(RegisterActivity.this,getResources().getString(R.string.user_created),Toast.LENGTH_LONG).show();
+        finish();
+    }
+    public void populate_error(String response){
+        //pour les erreurs concernant les paramètres transmis
+        if(response == "101")
+            Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_101),Toast.LENGTH_LONG).show();
+        if(response == "102")
+            Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_102),Toast.LENGTH_LONG).show();
+        if(response == "103")
+            Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_103),Toast.LENGTH_LONG).show();
+        if(response == "104")
+            Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_104),Toast.LENGTH_LONG).show();
+        if(response == "105")
+            Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_105),Toast.LENGTH_LONG).show();
+        //erreur concernant la connexion à la bdd et au rpc
+        if(response == "1")
+            Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_1),Toast.LENGTH_LONG).show();
+        if(response == "2")
+            Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_2),Toast.LENGTH_LONG).show();
+        if(response == "3")
+            Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_1),Toast.LENGTH_LONG).show();
     }
 }

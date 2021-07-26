@@ -14,6 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -71,6 +72,7 @@ public class cityAsync extends AsyncTask<Void, Void, String> {
                         JSONObject jIndexResponse = jListCity.getJSONObject(i);
                         listCity.add(jIndexResponse.getString("name"));
                     }
+                    Collections.sort(listCity);
                     this.activity.populate(listCity);
                 } else {
                     int error_code = jResponse.getInt("error_code");

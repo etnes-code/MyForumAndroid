@@ -25,4 +25,11 @@
     <string name="emptylistcity">List is empty</string>
     <string name="code_2">Unable to contact the server</string>
     <string name="code_1">" Please contact support"</string>
+    <string name="pwd1toshort">Password is to short</string>
+    <string name="code_101">login error, please contact support</string>
+    <string name="code_102">Password error, please contact support</string>
+    <string name="code_103">gender error, please contact support</string>
+    <string name="code_104">city error, please contact support</string>
+    <string name="user_created">User created</string>
+    <string name="code_105">user name is already taken</string>
 </resources>

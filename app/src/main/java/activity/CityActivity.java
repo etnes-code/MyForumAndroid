@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -44,6 +45,7 @@ public class CityActivity extends AppCompatActivity {
         new cityAsync(CityActivity.this).execute();
     }
     public void populate(List<String> listRep){
+
         if(listRep != null){
             Button btn;
             int cpt=1;
@@ -52,6 +54,9 @@ public class CityActivity extends AppCompatActivity {
                 btn.setId(cpt);
                 btn.setText(item);
                 btn.setOnClickListener(listener);
+                btn.setTextColor(getResources().getColor(R.color.textColor_btn));
+                btn.setBackgroundColor(getResources().getColor(R.color.background_btn));
+                btn.setGravity(Gravity.CENTER_HORIZONTAL);
                 llcity.addView(btn);
                 cpt++;
             }
@@ -62,7 +67,7 @@ public class CityActivity extends AppCompatActivity {
         }
     }
     public void populate_error(String reponse){
-       //notification pour informer l'utilisateur qu'il y a un soucis
+        //erreur concernant la connexion à la bdd et au rpc
         if(reponse == "1")
             Toast.makeText(CityActivity.this,getResources().getString(R.string.code_1),Toast.LENGTH_LONG).show();
         if(reponse == "2")
