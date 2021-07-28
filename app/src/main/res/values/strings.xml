@@ -32,4 +32,6 @@
     <string name="code_104">city error, please contact support</string>
     <string name="user_created">User created</string>
     <string name="code_105">user name is already taken</string>
+    <string name="wrongpwd">"the password entered is not correct "</string>
+    <string name="wrongloginname">the login name entered is not correct</string>
 </resources>

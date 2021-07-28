@@ -94,22 +94,22 @@ public class RegisterActivity extends AppCompatActivity {
     }
     public void populate_error(String response){
         //pour les erreurs concernant les paramètres transmis
-        if(response == "101")
+        if(response.equals("101"))
             Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_101),Toast.LENGTH_LONG).show();
-        if(response == "102")
+        if(response.equals("102"))
             Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_102),Toast.LENGTH_LONG).show();
-        if(response == "103")
+        if(response.equals("103"))
             Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_103),Toast.LENGTH_LONG).show();
-        if(response == "104")
+        if(response.equals("104"))
             Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_104),Toast.LENGTH_LONG).show();
-        if(response == "105")
+        if(response.equals("105"))
             Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_105),Toast.LENGTH_LONG).show();
         //erreur concernant la connexion à la bdd et au rpc
-        if(response == "1")
+        if(response.equals("1"))
             Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_1),Toast.LENGTH_LONG).show();
-        if(response == "2")
+        if(response.equals("2"))
             Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_2),Toast.LENGTH_LONG).show();
-        if(response == "3")
+        if(response.equals("3"))
             Toast.makeText(RegisterActivity.this,getResources().getString(R.string.code_1),Toast.LENGTH_LONG).show();
     }
 }
