@@ -23,4 +23,20 @@
     <string name="hintTopic">Titre du sujet</string>
     <string name="existingTopic">Sujet existant</string>
     <string name="ErrorMessageloginpwd">"vous n'avez pas rentré toutes les informations nécessaire "</string>
+    <string name="pwdnotthesame">Les mot de passe ne sont pas les mêmes</string>
+    <string name="emptylistcity">La liste est vide</string>
+    <string name="code_2">Impossible de contacter le serveur</string>
+    <string name="code_1">Veuillez contacter le support</string>
+    <string name="pwd1toshort">Le mot de passe est trop court</string>
+    <string name="code_101">Erreur de login, veuillez contacter le support</string>
+    <string name="code_102">Erreur , veuillez contacter le support</string>
+    <string name="code_103">Erreur , veuillez contacter le support</string>
+    <string name="code_104">Erreur , veuillez contacter le support</string>
+    <string name="user_created">Utilisateur crée</string>
+    <string name="code_105">Le pseudo est déjà prit, veuillez en inserer un autre</string>
+    <string name="wrongpwd">Le mot de passe entré n\'est pas correcte</string>
+    <string name="wrongloginname">le pseudo est introuvable</string>
+    <string name="welcomeUser">Bienvenue</string>
+    <string name="btnNewT">Crée un nouveau sujet</string>
+    <string name="titleoftopic">Titre du sujet</string>
 </resources>

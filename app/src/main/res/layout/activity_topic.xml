@@ -8,17 +8,19 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/background_linearl">
-
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textAppStyle"
+            android:gravity="center"
+            android:layout_marginTop="20sp"/>
         <Button
+            android:id="@+id/btn_newtopic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/topicCreate"
             />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hintTopic"
-            style="@style/editTextStyle"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

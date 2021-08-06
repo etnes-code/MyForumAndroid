@@ -57,13 +57,16 @@ public class HomeActivity extends AppCompatActivity {
     }
     public void populate(User userrecup){
         if(userrecup.getPassWord().equals(user.getPassWord())){
-            Toast.makeText(HomeActivity.this,"Connexion ok",Toast.LENGTH_LONG).show();
+            Intent intent =new Intent(HomeActivity.this,TopicActivity.class);
+            intent.putExtra("user",userrecup);
+            startActivity(intent);
+            finish();
         }else{
             Toast.makeText(HomeActivity.this,getResources().getString(R.string.wrongpwd),Toast.LENGTH_LONG).show();
         }
     }
     public void populate_error(String response){
-        Log.d("CA", "code  :" + response);
+        //finir les codes erreur
         if(response.equals("104"))
             Toast.makeText(HomeActivity.this,getResources().getString(R.string.wrongloginname),Toast.LENGTH_LONG).show();
         //erreur concernant la connexion à la bdd et au rpc
