@@ -38,7 +38,7 @@ public class newTopicAsync extends AsyncTask<Topic, Void, String> {
             OutputStream outputStream = connection.getOutputStream();
             BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
             String title = "title=" + data[0].getTitle();
-            String author = "author=" + data[0].getAuhtor();
+            String author = "author=" + data[0].getAuthor();
             String param = title+"&"+author;
             bufferedWriter.write(param);
             bufferedWriter.flush();

@@ -3,19 +3,24 @@ package POJO;
 import java.io.Serializable;
 
 public class Topic implements Serializable {
+
+
     private int idTopic;
     private String title;
-    private String auhtor;
+    private String author;
 
-    public Topic(int idTopic, String title, String auhtor) {
+    public Topic(){}
+
+    public Topic(int idTopic, int idTopic1, String title, String author) {
         this.idTopic = idTopic;
+        this.idTopic = idTopic1;
         this.title = title;
-        this.auhtor = auhtor;
+        this.author = author;
     }
 
-    public Topic(String title, String auhtor) {
+    public Topic(String title, String author) {
         this.title = title;
-        this.auhtor = auhtor;
+        this.author = author;
     }
 
     public int getIdTopic() {
@@ -34,11 +39,11 @@ public class Topic implements Serializable {
         this.title = title;
     }
 
-    public String getAuhtor() {
-        return auhtor;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setAuhtor(String auhtor) {
-        this.auhtor = auhtor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }
