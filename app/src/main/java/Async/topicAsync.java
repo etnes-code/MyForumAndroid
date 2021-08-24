@@ -66,7 +66,7 @@ public class topicAsync  extends AsyncTask<Void,Void,String> {
         } else {
             try {
                 JSONObject jResponse = new JSONObject(response);
-                if(jResponse.isNull("error_code")) {
+                if(jResponse.isNull("code")) {
                     JSONArray jListTopic = jResponse.getJSONArray("list_topic");
                     ArrayList<Topic> listTopic = new ArrayList<Topic>();
                     for (int i = 0; i < jListTopic.length(); i++) {
@@ -79,7 +79,7 @@ public class topicAsync  extends AsyncTask<Void,Void,String> {
                     }
                     this.activity.populate(listTopic);
                 } else {
-                    int error_code = jResponse.getInt("error_code");
+                    int error_code = jResponse.getInt("code");
                     this.activity.populate_error(String.valueOf(error_code));
                 }
             } catch (JSONException e) {

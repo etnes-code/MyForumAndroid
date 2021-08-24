@@ -68,12 +68,16 @@ public class CityActivity extends AppCompatActivity {
     }
     public void populate_error(String reponse){
         //erreur concernant la connexion à la bdd et au rpc
-        if(reponse == "1")
+        if(reponse.equals("1"))
             Toast.makeText(CityActivity.this,getResources().getString(R.string.code_1),Toast.LENGTH_LONG).show();
-        if(reponse == "2")
+        if(reponse.equals("2"))
             Toast.makeText(CityActivity.this,getResources().getString(R.string.code_2),Toast.LENGTH_LONG).show();
-        if(reponse == "3")
-            Toast.makeText(CityActivity.this,getResources().getString(R.string.code_1),Toast.LENGTH_LONG).show();
+        if(reponse.equals("3"))
+            Toast.makeText(CityActivity.this,getResources().getString(R.string.code_3),Toast.LENGTH_LONG).show();
+        if(reponse.equals("3000"))
+            Toast.makeText(CityActivity.this,getResources().getString(R.string.requesterror),Toast.LENGTH_LONG).show();
+        if(reponse.equals("3001"))
+            Toast.makeText(CityActivity.this,getResources().getString(R.string.emptylistcity),Toast.LENGTH_LONG).show();
     }
 }
 

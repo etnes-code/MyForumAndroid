@@ -39,4 +39,6 @@
     <string name="welcomeUser">Bienvenue</string>
     <string name="btnNewT">Crée un nouveau sujet</string>
     <string name="titleoftopic">Titre du sujet</string>
+    <string name="code_1000">Le sujet existe déjà</string>
+    <string name="code_3">la requête  au serveur n\'a pas pu aboutir, veuillez contacter le support</string>
 </resources>

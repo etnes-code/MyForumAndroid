@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -33,11 +35,9 @@ public class TopicActivity extends AppCompatActivity {
                 Intent intent= new Intent(TopicActivity.this,NewTopicActivity.class);
                 intent.putExtra("user",user);
                 startActivity(intent);
-                finish();
             }
         }
     };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +48,7 @@ public class TopicActivity extends AppCompatActivity {
             new topicAsync(TopicActivity.this).execute();
         }else{
             user= (User) intent_recup.getSerializableExtra("user");
+            new topicAsync(TopicActivity.this).execute();
 
         }
         tvWelcome=findViewById(R.id.tv_welcome);
@@ -65,16 +66,13 @@ public class TopicActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        new topicAsync(TopicActivity.this).execute();
-
     }
-
-
     public void populate(ArrayList<Topic> listtopic){
         if(listtopic != null){
             Button btn;
-            int cpt=1;
             for(Topic item : listtopic){
+
+                Log.d("CA", "liste pas vide  ");
                 btn=new Button(this);
                 btn.setId(item.getIdTopic());
                 btn.setText(item.getTitle());
@@ -83,17 +81,28 @@ public class TopicActivity extends AppCompatActivity {
                 btn.setBackgroundColor(getResources().getColor(R.color.background_btn));
                 btn.setGravity(Gravity.CENTER_HORIZONTAL);
                 llTopic.addView(btn);
-                cpt++;
             }
         }else {
             TextView tv=new TextView(this);
-            tv.setText(getResources().getString(R.string.emptylistcity));
+            tv.setText(getResources().getString(R.string.emptylisttopic));
             llTopic.addView(tv);
         }
-
     }
 
     public void populate_error(String response){
+        Log.d("CA", response);
+        //erreur concernant la connexion à la bdd et au rpc
+        if(response.equals("1"))
+            Toast.makeText(TopicActivity.this,getResources().getString(R.string.code_1),Toast.LENGTH_LONG).show();
+        if(response.equals("2"))
+            Toast.makeText(TopicActivity.this,getResources().getString(R.string.code_2),Toast.LENGTH_LONG).show();
+        if(response.equals("3"))
+            Toast.makeText(TopicActivity.this,getResources().getString(R.string.code_3),Toast.LENGTH_LONG).show();
+        if(response.equals("2001")){
+            TextView tv=new TextView(this);
+            tv.setText(getResources().getString(R.string.emptylisttopic));
+            llTopic.addView(tv);
+        }
 
     }
 }
