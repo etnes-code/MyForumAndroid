@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+    android:text="@string/tv_NewMessage"
+      style="@style/textAppStyle"/>
+  <EditText
+      android:id="@+id/et_newMessage"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      style="@style/editTextStyle"/>
+  <Button
+      android:id="@+id/btnNewMessage"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/BtnnewMessage" />
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+    android:text="@string/tv_listMessage"
+      style="@style/textAppStyle" />
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    </LinearLayout>
+  </ScrollView>
+  </LinearLayout>

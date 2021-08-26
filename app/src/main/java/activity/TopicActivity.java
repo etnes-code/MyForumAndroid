@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 import Async.cityAsync;
 import Async.newTopicAsync;
+import Async.postAsync;
 import Async.topicAsync;
 import POJO.Topic;
 import POJO.User;
@@ -35,7 +36,13 @@ public class TopicActivity extends AppCompatActivity {
                 Intent intent= new Intent(TopicActivity.this,NewTopicActivity.class);
                 intent.putExtra("user",user);
                 startActivity(intent);
+            }else{
+                Intent intent= new Intent(TopicActivity.this,PostActivity.class);
+                intent.putExtra("user",user);
+                intent.putExtra("idtopic",v.getId());
+                startActivity(intent);
             }
+
         }
     };
     @Override
@@ -62,17 +69,16 @@ public class TopicActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         outState.putSerializable("user",user);
     }
-
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onRestart() {
+        super.onRestart();
+        llTopic.removeAllViews();
+        new topicAsync(TopicActivity.this).execute();
     }
     public void populate(ArrayList<Topic> listtopic){
         if(listtopic != null){
             Button btn;
             for(Topic item : listtopic){
-
-                Log.d("CA", "liste pas vide  ");
                 btn=new Button(this);
                 btn.setId(item.getIdTopic());
                 btn.setText(item.getTitle());
@@ -90,7 +96,6 @@ public class TopicActivity extends AppCompatActivity {
     }
 
     public void populate_error(String response){
-        Log.d("CA", response);
         //erreur concernant la connexion à la bdd et au rpc
         if(response.equals("1"))
             Toast.makeText(TopicActivity.this,getResources().getString(R.string.code_1),Toast.LENGTH_LONG).show();
@@ -98,7 +103,9 @@ public class TopicActivity extends AppCompatActivity {
             Toast.makeText(TopicActivity.this,getResources().getString(R.string.code_2),Toast.LENGTH_LONG).show();
         if(response.equals("3"))
             Toast.makeText(TopicActivity.this,getResources().getString(R.string.code_3),Toast.LENGTH_LONG).show();
-        if(response.equals("2001")){
+        if(response.equals("2001"))
+            Toast.makeText(TopicActivity.this,getResources().getString(R.string.errorRequest),Toast.LENGTH_LONG).show();
+        if(response.equals("2010")){
             TextView tv=new TextView(this);
             tv.setText(getResources().getString(R.string.emptylisttopic));
             llTopic.addView(tv);

@@ -77,7 +77,6 @@ public class registerAsync extends AsyncTask<User, Void, String> {
                 try {
                     JSONObject jResponse = new JSONObject(response);
                     int code = jResponse.getInt("code");
-                    Log.d("CA", "code  :" + String.valueOf(code));
                     if(code==100)
                         this.activity.populate();
                     else

@@ -51,8 +51,12 @@ public class NewTopicActivity extends AppCompatActivity {
             Toast.makeText(NewTopicActivity.this,getResources().getString(R.string.code_2),Toast.LENGTH_LONG).show();
         if(response.equals("3"))
             Toast.makeText(NewTopicActivity.this,getResources().getString(R.string.code_1),Toast.LENGTH_LONG).show();
+        if(response.equals("2003") || response.equals("2004") )
+            Toast.makeText(NewTopicActivity.this,getResources().getString(R.string.errorP),Toast.LENGTH_LONG).show();
+        if(response.equals("2005")  )
+            Toast.makeText(NewTopicActivity.this,getResources().getString(R.string.errorRequest),Toast.LENGTH_LONG).show();
         //erreur si la sujet est déjà présent
-        if(response.equals("1000"))
-            Toast.makeText(NewTopicActivity.this,getResources().getString(R.string.code_1000),Toast.LENGTH_LONG).show();
+        if(response.equals("2010"))
+            Toast.makeText(NewTopicActivity.this,getResources().getString(R.string.code_2000),Toast.LENGTH_LONG).show();
     }
 }

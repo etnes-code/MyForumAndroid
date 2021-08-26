@@ -41,4 +41,15 @@
     <string name="titleoftopic">Titre du sujet</string>
     <string name="code_1000">Le sujet existe déjà</string>
     <string name="code_3">la requête  au serveur n\'a pas pu aboutir, veuillez contacter le support</string>
+    <string name="emptylisttopic">La liste des sujets est vide</string>
+    <string name="requesterror">erreur de requête, veuillez contacter le support</string>
+    <string name="BtnnewMessage">Poster le message</string>
+    <string name="tv_NewMessage">Écrire votre message ici</string>
+    <string name="tv_listMessage">Message existant</string>
+    <string name="topicTitle">Sujets</string>
+    <string name="cityTitle">Liste des villes</string>
+    <string name="registerTitle">S\'enregistrer</string>
+    <string name="newTopicTitle">Nouveau sujet</string>
+    <string name="messageTitle">Message</string>
+    <string name="code_2000">Le sujet existe déjà</string>
 </resources>

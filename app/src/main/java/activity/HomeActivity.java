@@ -62,13 +62,13 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }else{
-            Toast.makeText(HomeActivity.this,getResources().getString(R.string.wrongpwd),Toast.LENGTH_LONG).show();
+            Toast.makeText(HomeActivity.this,getResources().getString(R.string.wronglogin),Toast.LENGTH_LONG).show();
         }
     }
     public void populate_error(String response){
         //finir les codes erreur
         if(response.equals("104"))
-            Toast.makeText(HomeActivity.this,getResources().getString(R.string.wrongloginname),Toast.LENGTH_LONG).show();
+            Toast.makeText(HomeActivity.this,getResources().getString(R.string.wronglogin),Toast.LENGTH_LONG).show();
         //erreur concernant la connexion à la bdd et au rpc
         if(response.equals("1"))
             Toast.makeText(HomeActivity.this,getResources().getString(R.string.code_1),Toast.LENGTH_LONG).show();

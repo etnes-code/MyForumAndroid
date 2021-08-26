@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
 package="activity">
 
 <uses-permission android:name="android.permission.INTERNET" />
@@ -12,10 +11,11 @@ package="activity">
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/Theme.MyForum">
-    <activity android:name="activity.TopicActivity" />
-    <activity android:name="activity.CityActivity" />
-    <activity android:name="activity.RegisterActivity" />
-    <activity android:name="activity.NewTopicActivity"></activity>
+    <activity android:name="activity.TopicActivity" android:label="@string/topicTitle" />
+    <activity android:name="activity.CityActivity" android:label="@string/cityTitle" />
+    <activity android:name="activity.RegisterActivity" android:label="@string/registerTitle" />
+    <activity android:name="activity.NewTopicActivity" android:label="@string/newTopicTitle"></activity>
+    <activity android:name="activity.PostActivity" android:label="@string/messageTitle"></activity>
     <activity
         android:name="activity.HomeActivity"
         android:label="@string/Home">
@@ -26,6 +26,7 @@ package="activity">
     </activity>
 </application>
 </manifest>
+
 
 
 

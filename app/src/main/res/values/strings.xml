@@ -31,15 +31,30 @@
     <string name="code_103">gender error, please contact support</string>
     <string name="code_104">city error, please contact support</string>
     <string name="user_created">User created</string>
-    <string name="code_105" translatable="false">user name is already taken</string>
+    <string name="code_105">user name is already taken</string>
     <string name="wrongpwd">"the password entered is not correct "</string>
     <string name="wrongloginname">the login name entered is not correct</string>
     <string name="welcomeUser">"Welcome "</string>
     <string name="ErrorMessageloginpwd">" you have not entered all the necessary information"</string>
     <string name="btnNewT">Create new topic</string>
     <string name="titleoftopic">Title of topic</string>
-    <string name="code_1000">Topic already exist</string>
     <string name="code_3">the request to the server could not succeed, please contact support</string>
     <string name="emptylisttopic">The list of topic is empty</string>
     <string name="requesterror">error request, please contact the support</string>
+    <string name="BtnnewMessage">Post a new message</string>
+    <string name="tv_NewMessage">Write here your message</string>
+    <string name="tv_listMessage">Existing message</string>
+    <string name="topicTitle">Topics</string>
+    <string name="cityTitle">City list</string>
+    <string name="registerTitle">Register</string>
+    <string name="newTopicTitle">New topic</string>
+    <string name="messageTitle">Post</string>
+    <string name="wronglogin">Incorrect login or password</string>
+    <string name="newpostempty">field message is empty</string>
+    <string name="errorP">Error  params, please contact support</string>
+    <string name="errorRequest">request error, please contact the support.</string>
+    <string name="postCreated">post created</string>
+    <string name="PostWritter">"Post by "</string>
+    <string name="emptylistPost">list of message is empty</string>
+    <string name="code_2000">Topic already exist</string>
 </resources>

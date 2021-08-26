@@ -14,4 +14,7 @@
     <color name="colorText_hint">#524364</color>
     <color name="background_linearl">#5DA9DC</color>
     <color name="background_editText">#8FCBF3</color>
+    <color name="color_male">#001871</color>
+    <color name="color_female">#9C27B0</color>
+    <color name="color_listempy">#F10000</color>
 </resources>
